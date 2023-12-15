@@ -1,5 +1,5 @@
 <?php
-require_once('../sql/db_connection.php');
+require_once('./db_connection.php');
 
 // Obtener el nombre y apellido del usuario
 $name = htmlspecialchars($_GET['name'], ENT_QUOTES, 'UTF-8');

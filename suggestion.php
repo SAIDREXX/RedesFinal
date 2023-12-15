@@ -1,8 +1,8 @@
 <?php
     // Conectar a la base de datos
     $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $username = "saidrexxx";
+    $password = "Demeneghi";
     $dbname = "redes";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,7 +13,7 @@
     }
 
     // Obtener el término de búsqueda
-    $query = $_GET['q'];
+    $query = $conn->real_escape_string($_GET['q']);
 
     // Consulta a la base de datos
     $sql = "SELECT name, last_name FROM usuarios WHERE name LIKE '%$query%'";

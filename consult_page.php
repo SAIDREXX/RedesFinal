@@ -26,7 +26,7 @@
 
     <nav class="flex flex-grow basis-0 justify-end">
         <ul class="text-white flex [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-2xl [&>li>a]:font-Poppins">
-            <li><a class="hover:glow-shadow-green duration-500" href="./add_page.php">Añadir</a></li>
+            <li><a class="hover:glow-shadow-green duration-500" href="../index.php">Añadir</a></li>
             <li><a class="hover:glow-shadow-yellow duration-500" href="./consult_page.php">Consultar</a></li>
         </ul>
     </nav>
@@ -79,7 +79,7 @@
 
         if (query !== '') {
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', '../api/suggestion.php?q=' + query, true);
+            xhr.open('GET', './suggestion.php?q=' + query, true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     document.getElementById('suggestions-container').classList.remove('hidden');
@@ -103,7 +103,7 @@
 
     function showUserInfo(name, lastName) {
         var xhrDetails = new XMLHttpRequest();
-        xhrDetails.open('GET', '../api/user_details.php?name=' + name + '&last_name=' + lastName, true);
+        xhrDetails.open('GET', './user_details.php?name=' + name + '&last_name=' + lastName, true);
         xhrDetails.onreadystatechange = function() {
             if (xhrDetails.readyState == 4 && xhrDetails.status == 200) {
                 document.getElementById('user-details').innerHTML = xhrDetails.responseText;
@@ -129,7 +129,7 @@
 
     function deleteUserInfo(name, lastName) {
         var xhrDelete = new XMLHttpRequest();
-        xhrDelete.open('GET', '../api/delete_user.php?name=' + name + '&last_name=' + lastName, true);
+        xhrDelete.open('GET', './delete_user.php?name=' + name + '&last_name=' + lastName, true);
         xhrDelete.onreadystatechange = function() {
             if (xhrDelete.readyState == 4 && xhrDelete.status == 200) {
                 // Mostrar el resultado de la eliminación

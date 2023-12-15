@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <ul
             class="text-white flex [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:text-2xl [&>li>a]:font-Poppins "
             >
-            <li><a class="hover:glow-shadow-green duration-500" href="./add_page.php">Añadir</a></li>
+            <li><a class="hover:glow-shadow-green duration-500" href="./index.php">Añadir</a></li>
             <li><a class="hover:glow-shadow-yellow duration-500" href="./consult_page.php">Consultar</a></li>
             
             </ul>
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     border-white border rounded-md shadow-md shadow-black/10 text-center flex-col">
             <h2 class="flex p-4 mx-auto text-2xl mb-4 font-Poppins text-white">Registro de Usuario</h2>
 
-            <form action="../api/add_user.php" method="POST" enctype="multipart/form-data">
+            <form action="./add_user.php" method="POST" enctype="multipart/form-data">
             <div class="flex flex-row px-4 py-1 justify-between items-center">
                 <label for="file" class="text-[#009dd1] font-Poppins">Foto de Perfil</label>
                 <span id="spanFile" class="text-white border rounded-sm p-1 duration-500 hover:glow-shadow-blue cursor-pointer">Seleccionar</span>

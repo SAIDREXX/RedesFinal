@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["sendForm"])) {
         // Manejar la foto de perfil
         if (!empty($_FILES["picture"]["name"])) {
             // Carpeta de almacenamiento
-            $carpetaAlmacenamiento = "../uploads/";
+            $carpetaAlmacenamiento = "./uploads/";
 
             // Nombre del archivo con el formato especificado
             $nombreArchivo = $nombre . "." . $apellidos . "." . date("YmdHis") . "." . pathinfo($_FILES["picture"]["name"], PATHINFO_EXTENSION);
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["sendForm"])) {
         }
 
         // Conectar a la base de datos
-        $conexion = new mysqli("localhost", "root", "", "redes");
+        $conexion = new mysqli("localhost", "saidrexxx", "Demeneghi", "redes");
 
         // Verificar la conexión
         if ($conexion->connect_error) {
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["sendForm"])) {
 
         // Verificar si la inserción fue exitosa
         if ($resultado) {
-            header("Location: ../pages/add_page.php");
+            header("Location: ./index.php");
         } else {
             echo "Error al insertar datos: " . $sentencia->error;
         }
